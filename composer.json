@@ -1,0 +1,11 @@
+{
+    "name": "ateliee/php_gettext_error",
+    "license": "MIT",
+    "homepage": "https://github.com/ateliee/php_gettext_error",
+    "description": "php error message translation output",
+    "authors": [
+        {
+            "name": "ateliee"
+        }
+    ]
+}
