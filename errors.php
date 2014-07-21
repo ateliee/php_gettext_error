@@ -49,8 +49,9 @@ class PHPLangError{
 
         $format = "[%s] %s %s(%s)\n";
         $lang_sub_list = array(
-            "array" => "配列",
-            "string" => "文字列",
+            "array" => __("array"),
+            "string" => __("string"),
+            "object" => __("object"),
         );
         $lang_list = array(
             "Missing argument (\d+) for (.+), called in" => __("Missing argument $1 for $2, called in"),
@@ -63,6 +64,8 @@ class PHPLangError{
             "Cannot access private property" => __("Cannot access private property"),
             "Undefined variable:" => __("Undefined variable:"),
             "Undefined index:" => __("Undefined index:"),
+            "Illegal offset type in isset or empty" => __("Illegal offset type in isset or empty"),
+            "(.+) expects parameter (.+) to be (.+), (.+) given" => __("$1 expects parameter $2 to be $3, $4 given"),
         );
         $errorno_str = array(
             E_ERROR => "ERROR",
