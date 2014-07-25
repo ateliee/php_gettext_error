@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PHP Error\n"
 "Report-Msgid-Bugs-To: http://ateliee.com\n"
-"POT-Creation-Date: 2014-07-21 10:08+0900\n"
-"PO-Revision-Date: 2014-07-21 10:09+0900\n"
+"POT-Creation-Date: 2014-07-24 01:46+0900\n"
+"PO-Revision-Date: 2014-07-24 01:46+0900\n"
 "Last-Translator: ateliee <info@ateliee.com>\n"
 "Language-Team: ateliee <info@ateliee.com>\n"
 "Language: ja_JP\n"
@@ -76,59 +76,72 @@ msgstr "配列またはオブジェクトをキーとして使用することは
 
 #: errors.php:68
 msgid "$1 expects parameter $2 to be $3, $4 given"
-msgstr "関数$1の$2個目に$3が渡されています。$4を渡してください。"
+msgstr "関数$1の$2個目に$4が渡されています。$3を渡してください。"
 
-#: errors.php:88
+#: errors.php:69
+#, fuzzy
+msgid "Call to private method $1 from context '$2'"
+msgstr "'$2'から $1 のprotectedメソッドにアクセスできません"
+
+#: errors.php:70
+msgid "Call to a member function $1 on a non-object"
+msgstr "$1はオブジェクトに関連付けられていないメンバー関数です"
+
+#: errors.php:71
+msgid "Invalid argument supplied for $1"
+msgstr "配列でないものを$1している可能性があります"
+
+#: errors.php:91
 msgid "Fatal run-time errors"
 msgstr "重大なエラー"
 
-#: errors.php:89
+#: errors.php:92
 msgid "Run-time warnings (non-fatal errors)"
 msgstr "実行時の警告 (致命的なエラーではない)"
 
-#: errors.php:90
+#: errors.php:93
 msgid "Compile-time parse errors"
 msgstr "コンパイル時のパースエラー"
 
-#: errors.php:91 errors.php:101
+#: errors.php:94 errors.php:104
 msgid "Run-time notices"
 msgstr "実行時の警告"
 
-#: errors.php:92
+#: errors.php:95
 msgid "Fatal errors that occur during PHP's initial startup"
 msgstr "PHPの初期始動時点での致命的なエラー"
 
-#: errors.php:93
+#: errors.php:96
 msgid "Warnings (non-fatal errors)"
 msgstr "（致命的ではない）警告"
 
-#: errors.php:94
+#: errors.php:97
 msgid "Fatal compile-time errors"
 msgstr "コンパイル時の致命的なエラー"
 
-#: errors.php:95
+#: errors.php:98
 msgid "Compile-time warnings (non-fatal errors)"
 msgstr "コンパイル時の警告（致命的ではない）"
 
-#: errors.php:96
+#: errors.php:99
 msgid "User-generated error message"
 msgstr "ユーザーによって発行されるエラーメッセージ"
 
-#: errors.php:97 errors.php:102
+#: errors.php:100 errors.php:105
 msgid "User-generated warning message"
 msgstr "ユーザーによって発行される警告メッセージ"
 
-#: errors.php:98
+#: errors.php:101
 msgid "User-generated notice message"
 msgstr "ユーザーによって発行される注意メッセージ"
 
-#: errors.php:99
+#: errors.php:102
 msgid ""
 "Enable to have PHP suggest changes to your code which will ensure the best "
 "interoperability and forward compatibility of your code"
 msgstr "PHP互換性エラー"
 
-#: errors.php:100
+#: errors.php:103
 msgid "Catchable fatal error"
 msgstr "キャッチできる致命的なエラー"
 

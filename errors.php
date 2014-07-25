@@ -65,7 +65,10 @@ class PHPLangError{
             "Undefined variable:" => __("Undefined variable:"),
             "Undefined index:" => __("Undefined index:"),
             "Illegal offset type in isset or empty" => __("Illegal offset type in isset or empty"),
-            "(.+) expects parameter (.+) to be (.+), (.+) given" => __("$1 expects parameter $2 to be $3, $4 given"),
+            "(.+\(\)) expects parameter (.+) to be (.+), (.+) given" => __("$1 expects parameter $2 to be $3, $4 given"),
+            "Call to private method (.+) from context '(.+)'" => __("Call to private method $1 from context '$2'"),
+            "Call to a member function (.+) on a non-object" => __("Call to a member function $1 on a non-object"),
+            "Invalid argument supplied for (.+)" => __("Invalid argument supplied for $1"),
         );
         $errorno_str = array(
             E_ERROR => "ERROR",
@@ -110,7 +113,7 @@ class PHPLangError{
             if(preg_match("/".$k."/",$errstr,$mt)){
                 $errstr = preg_replace("/".$k."/",__($v),$errstr,1);
                 foreach($lang_sub_list as $kk => $vv){
-                    $errstr = preg_replace("/".$kk."/i",$vv,$errstr);
+                    $errstr = preg_replace("/([\b])".$kk."([\b])/i","$1".$vv."$2",$errstr);
                 }
                 break;
             }
