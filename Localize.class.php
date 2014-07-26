@@ -247,12 +247,22 @@ class Localize{
      * @return mixed
      */
     static function getText($text,$encoding=""){
+        return self::dgetText(self::$current_domain,$text,$encoding);
+    }
+
+    /**
+     * @param $domain
+     * @param $text
+     * @param string $encoding
+     * @return string
+     */
+    static function dgetText($domain,$text,$encoding=""){
         if(!$encoding){
             $encoding = self::$encoding;
         }
-        if(isset(self::$domains[self::$current_domain])){
-            self::loadDomain(self::$current_domain);
-            foreach(self::$domains[self::$current_domain]["text"] as $key => $val){
+        if(isset(self::$domains[$domain])){
+            self::loadDomain($domain);
+            foreach(self::$domains[$domain]["text"] as $key => $val){
                 if($key == $text){
                     $text = $val;
                     if(!$encoding){
