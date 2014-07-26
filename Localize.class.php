@@ -6,8 +6,16 @@ if(!function_exists("_e")){
     }
 }
 if(!function_exists("__")){
-    function __($text){
-        return Localize::getText($text,Localize::getEncoding());
+    function __(){
+        $arg_num = func_num_args();
+        if($arg_num == 1){
+            return Localize::getText(func_get_arg(0),Localize::getEncoding());
+        }else if($arg_num > 1){
+            $args = array_merge(
+                array(Localize::getText(func_get_arg(0),Localize::getEncoding())),
+                array_slice(func_get_args(),1));
+            return call_user_func_array("sprintf",$args);
+        }
     }
 }
 /**
